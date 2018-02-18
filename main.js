@@ -107,7 +107,7 @@ function createWindow() {
 } // end createWindow
 
 
-// This method will be called when Elextron has finished
+// This method will be called when Electron has finished
 // initialization and is read to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', function () {
