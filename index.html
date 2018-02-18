@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <title>Spirograph in Electron!</title>
     <style>
-      /*
-      #loading {
-        position: absolute;
-        width: 100%;
-        top: 45%;
-        text-align: center;
-      }
-      */
-
       #expressApp {
         display: inline-flex !important;
         position: absolute;
@@ -36,10 +27,6 @@
       window.$ = window.jQuery = require("./node_modules/jquery/dist/jquery.min.js");
 
       const appUrl = "http://127.0.0.1:8001";
-      const spawn = require("child_process").spawn;
-      const node = spawn("node",["./app/bin/www"], {
-          cwd: process.cwd()
-      });
 
       request = require("request");
       $expressApp = $("#expressApp");
@@ -48,8 +35,6 @@
         request(appUrl, (error, response, body) => {
           if (!error && response.statusCode == 200) {
             $expressApp.attr("src", appUrl);
-            // $loading.css("display", "none");
-            // $expressApp.css("display", "block");
             clearInterval(checkServerRunning);
           }
         });

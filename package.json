@@ -13,6 +13,7 @@
     "body-parser": "^1.17.2",
     "ejs": "^2.5.7",
     "electron": "~1.7.8",
+    "electron-log": "^2.2.14",
     "express": "^4.15.4",
     "express-validator": "^3.2.1",
     "jquery": "^3.3.1"
